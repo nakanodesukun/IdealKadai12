@@ -22,6 +22,7 @@ class TaxCalcViewController: UIViewController, TaxRepositoryDelegate {
         taxRepository.delegate = self
         taxRepository.loadData { [weak self] in
             self?.taxRateTextField.text = String($0)
+            print($0)
         }
 
     }
